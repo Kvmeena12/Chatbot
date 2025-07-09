@@ -204,7 +204,7 @@ if send and user_input:
     with st.spinner("Thinking..."):
         answer = get_gemini_response(prompt)
     st.session_state['chat_history'].append(("You", user_input))
-    st.session_state['chat_history'].append(("Gemini", answer))
+    st.session_state['chat_history'].append(("AI Answer:", answer))
     st.markdown(f"<div style='font-size:16px;'><b>Gemini:</b> {answer}</div>", unsafe_allow_html=True)
 
 # --- Collapsible chat history with save and clear buttons ---
